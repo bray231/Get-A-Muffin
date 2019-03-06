@@ -1,9 +1,9 @@
-#placehere {
+#muffinButton {
   border-radius:8px;
   color:white;
   background-color:#654321;
 }
 
-#placehere:hover {
+#muffinButton:hover {
   background-color:#987654;
 }
