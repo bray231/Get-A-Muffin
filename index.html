@@ -4,7 +4,7 @@
     var num_muffins = 0;
     
     function getMuffin(){
-      num_muffins = ConvertBase.dec2bin(num_muffins + 1);
+      num_muffins = convertToBinary(num_muffins + 1);
       var elem = document.createElement("img");
       elem.src = 'muffin.jpg';
       elem.setAttribute("height", "24");
@@ -14,53 +14,15 @@
       document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
     }
     
-    (function(){
-
-      var ConvertBase = function (num) {
-          return {
-              from : function (baseFrom) {
-                  return {
-                      to : function (baseTo) {
-                          return parseInt(num, baseFrom).toString(baseTo);
-                      }
-                  };
-              }
-          };
-      };
-
-      // binary to decimal
-      ConvertBase.bin2dec = function (num) {
-          return ConvertBase(num).from(2).to(10);
-      };
-
-      // binary to hexadecimal
-      ConvertBase.bin2hex = function (num) {
-          return ConvertBase(num).from(2).to(16);
-      };
-
-      // decimal to binary
-      ConvertBase.dec2bin = function (num) {
-          return ConvertBase(num).from(10).to(2);
-      };
-
-      // decimal to hexadecimal
-      ConvertBase.dec2hex = function (num) {
-          return ConvertBase(num).from(10).to(16);
-      };
-
-      // hexadecimal to binary
-      ConvertBase.hex2bin = function (num) {
-          return ConvertBase(num).from(16).to(2);
-      };
-
-      // hexadecimal to decimal
-      ConvertBase.hex2dec = function (num) {
-          return ConvertBase(num).from(16).to(10);
-      };
-
-      this.ConvertBase = ConvertBase;
-
-    })(this);
+    function convertToBinary(num){
+      binary = '';
+      
+      while ( num > 0 ) {
+        binary = ( num % 2 ) + binary;
+        num = Math.floor( num / 2 );
+      }
+      return binary;
+    }
   </script>
   <head>
     <link rel="stylesheet" type="text/css" href="interface.css">
