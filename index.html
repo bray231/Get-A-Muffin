@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
+  <script type="text/javascript">
+    function getMuffin(){
+      var elem = document.createElement("img");
+      elem.src = 'muffin.jpg';
+      elem.setAttribute("height", "24");
+      elem.setAttribute("width", "24");
+      elem.setAttribute("alt", "Muffin!");
+      document.getElementById("placehere").appendChild(elem);
+    }
+  </script>
   <head>
     <title>Get A Muffin</title>
   </head>
-  <script type="text/javascript">
-    var elem = document.createElement("img");
-    elem.src = 'muffin.jpg';
-    elem.setAttribute("height", "24");
-    elem.setAttribute("width", "24");
-    elem.setAttribute("alt", "Muffin!");
-    document.getElementById("placehere").appendChild(elem);
-  </script>
   <body>
-    <button id="placehere">Click For A Muffin!</button>
+    <button onclick="getMuffin()">Click For A Muffin!</button>
+    <div id="placehere"></div>
   </body>
 </html>
