@@ -17,5 +17,5 @@ function convertToBinary(num){
 }
 
 function convertToDecimal(num){
-    return parseInt(num, 2).toInteger(10);
+    return parseInt(num, 2).toString(10);
 }
