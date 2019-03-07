@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <script type="text/javascript">
-    var num_muffins = 0;
-    
-    function getMuffin(){
-      num_muffins = num_muffins + 1;
-      var elem = document.createElement("img");
-      elem.src = 'muffin.jpg';
-      elem.setAttribute("height", "24");
-      elem.setAttribute("width", "24");
-      elem.setAttribute("alt", "Muffin!");
-      document.getElementById("placehere").appendChild(elem);
-      document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
-    }
-  </script>
   <head>
     <link rel="stylesheet" type="text/css" href="interface.css">
     <title>Get A Muffin</title>
   </head>
+  
   <body>
     <button onclick="getMuffin()" id="muffinButton">Click For A Muffin!</button>
     <span id="muffin_counter">Muffins: 0</span>
     <div id="placehere"></div>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
