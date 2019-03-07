@@ -5,7 +5,7 @@
     
     function getMuffin(){
       num_muffins = document.getElementById("muffin_counter").innerHTML;
-      num_muffins_binary = convertToBinary(num_muffins);
+      var num_muffins_binary = convertToBinary(num_muffins);
       var elem = document.createElement("img");
       elem.src = 'muffin.jpg';
       elem.setAttribute("height", "24");
