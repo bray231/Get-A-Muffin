@@ -4,7 +4,7 @@
     var num_muffins = 0;
     
     function getMuffin(){
-      num_muffins = document.getElementById("muffin_counter_num").innerHTML;
+      num_muffins = document.getElementById("muffin_counter_num").innerHTML + 1;
       num_muffins = convertToBinary(num_muffins);
       var elem = document.createElement("img");
       elem.src = 'muffin.jpg';
