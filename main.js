@@ -1,7 +1,9 @@
 var num_muffins = 0;
+var counter = 0;
     
 function getMuffin(){
-  num_muffins = num_muffins + 1;
+  counter += 1;
+  num_muffins = convertToBinary(counter);
   var elem = document.createElement("img");
   elem.src = 'muffin.jpg';
   elem.setAttribute("height", "24");
@@ -9,4 +11,8 @@ function getMuffin(){
   elem.setAttribute("alt", "Muffin!");
   document.getElementById("placehere").appendChild(elem);
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
+}
+
+function convertToBinary(num){
+  return parseInt(num, 10).toString(2);
 }
