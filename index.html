@@ -4,14 +4,15 @@
     var num_muffins = 0;
     
     function getMuffin(){
-      num_muffins = convertToBinary(num_muffins + 1);
+      num_muffins = document.getElementById("muffin_counter").innerHTML;
+      num_muffins_binary = convertToBinary(num_muffins);
       var elem = document.createElement("img");
       elem.src = 'muffin.jpg';
       elem.setAttribute("height", "24");
       elem.setAttribute("width", "24");
       elem.setAttribute("alt", "Muffin!");
       document.getElementById("placehere").appendChild(elem);
-      document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
+      document.getElementById("muffin_counter_title").innerHTML = "Muffins: " + num_muffins_binary;
     }
     
     function convertToBinary(num){
@@ -30,7 +31,8 @@
   </head>
   <body>
     <button onclick="getMuffin()" id="muffinButton">Click For A Muffin!</button>
-    <span id="muffin_counter">Muffins: 0</span>
+    <span id="muffin_counter_title">Muffins: </span>
+    <span id="muffin_counter">0</span>
     <div id="placehere"></div>
   </body>
 </html>
