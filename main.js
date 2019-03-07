@@ -3,7 +3,7 @@ var counter = 0;
     
 function getMuffin(){
   counter += 1;
-  num_muffins = convertToBinary(counter);
+  num_muffins = convertToHexa(counter);
   var elem = document.createElement("img");
   elem.src = 'muffin.jpg';
   elem.setAttribute("height", "24");
@@ -13,6 +13,6 @@ function getMuffin(){
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
-function convertToBinary(num){
-  return parseInt(num, 10).toString(2);
+function convertToHexa(num){
+  return parseInt(num, 10).toString(16);
 }
