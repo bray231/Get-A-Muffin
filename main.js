@@ -10,15 +10,15 @@ function getMuffin(){
   }
   
   if(rnd == 1){
-    elem.src = 'chocolate_chip.jpg';
+    elem.src = 'Images/chocolate_chip.jpg';
   }
   
   if(rnd == 2){
-    elem.src = 'chocolate.jpg';
+    elem.src = 'Images/chocolate.jpg';
   }
   
   if(rnd == 3){
-    elem.src = 'plain.jpg';
+    elem.src = 'Images/plain.jpg';
   }
   
   elem.setAttribute("height", "24");
