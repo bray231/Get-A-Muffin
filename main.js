@@ -9,6 +9,7 @@ var counter = 0;
 function getMuffin(){
   counter += 1;
   num_muffins = checkAndConvert(counter);
+  choosePic();
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
