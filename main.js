@@ -12,14 +12,15 @@ function getMuffin(){
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
-$("document").ready(function(){
-    var images = ["chocolate.jpg","chocolate_chip.jpg","plain.jpg"];
-    
-    $('.container div:not(.row)').each(function() {
-        var rand = Math.floor(Math.random() * images.length);
-        $(this).append('<img src="' + images[rand] + '"/>');
-    });
-});
+function choosePic(){
+    img = document.createElement("img");
+    var images = new Array();
+    images[1] = "chocolate.jpg";
+    images[2] = "chocolate_chip.jpg";
+    images[3] = "plain.jpg";
+    img.setAttribute('src','images[Math.round(Math.random()*3)]');
+    document.getElementById("placehere").appendChild(img);
+}
 
 function checkAndConvert(num){
     if(isBinary == true){
