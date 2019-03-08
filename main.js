@@ -8,8 +8,13 @@ var counter = 0;
     
 function getMuffin(){
   counter += 1;
+  var elem = document.createElement("img");
+  elem.src = 'chocolate_chip.jpg';
+  elem.setAttribute("heaight", "24");
+  elem.setAttribute("width", "24");
+  elem.setAttribute("alt" "Muffin!");
   num_muffins = checkAndConvert(counter);
-  document.getElementById("placehere").innerHTML="<img src='Images/chocolate_chip.png' /></img>";
+  document.getElementById("placehere").appendChild(elem);
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
