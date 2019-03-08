@@ -15,9 +15,9 @@ function getMuffin(){
 function choosePic(){
     img = document.createElement("img");
     var images = new Array();
-    images[1] = "chocolate.jpg";
-    images[2] = "chocolate_chip.jpg";
-    images[3] = "plain.jpg";
+    images[1] = "images/chocolate.jpg";
+    images[2] = "images/chocolate_chip.jpg";
+    images[3] = "images/plain.jpg";
     img.setAttribute('src','images[Math.round(Math.random()*3)]');
     document.getElementById("placehere").appendChild(img);
 }
