@@ -12,19 +12,14 @@ function getMuffin(){
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
-function choosePic(){
-    var myImages1 = new Array ();
-    myImages1[1] = "images/chocolate_chip.jpg";
-    myImages1[2] = "images/chocolate.jpg";
-    myImages1[3] = "images/plain.jpg";
-    var rnd = Math.floor(Math.random() * myImages1.length);
+$("document").ready(function(){
+    var images = ["chocolate.jpg","chocolate_chip.jpg","plain.jpg"];
     
-    if(rnd == 0){
-       rnd = 1;
-    }
-    
-    var html_code = '<img id="a_muffin" src="' + myImages1[rnd] + '" />';
-    document.write(html_code);
+    $('.container div:not(.row)').each(function() {
+        var rand = Math.floor(Math.random() * images.length);
+        $(this).append('<img src="' + images[rand] + '"/>');
+    });
+});
 
 function checkAndConvert(num){
     if(isBinary == true){
