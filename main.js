@@ -14,20 +14,18 @@ function getMuffin(){
 }
 
 function choosePic() {
-    var myPix = new Array()
-    myPix[1] = "images/chocolate_chip.jpg";
-    myPix[2] = "images/chocolate.jpg";
-    myPix[3] = "images/plain.jpg";
-    var rnd = Math.floor(Math.random() * myPix.length);
+    var myImages1 = new Array ();
+    myImages1[1] = "images/chocolate_chip.jpg";
+    myImages1[2] = "images/chocolate.jpg";
+    myImages1[3] = "images/plain.jpg";
+    var rnd = Math.floor(Math.random() * myImages1.length);
     
     if(rnd == 0){
        rnd = 1;
     }
     
-    myPix[rnd].setAttribute("height", "24");
-    myPix[rnd].setAttribute("width", "24");
-    myPix[rnd].setAttribute("alt", "Muffin!");
-    document.getElementById("placehere").appendChild(myPix[rnd]);
+    var html_code = '<img id="a_muffin" src="' + myImages1[rnd] + '" />';
+    document.write(html_code);
 
 function checkAndConvert(num){
     if(isBinary == true){
