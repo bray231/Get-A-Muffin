@@ -10,13 +10,19 @@ function getMuffin(){
   counter += 1;
   num_muffins = checkAndConvert(counter);
   var elem = document.createElement("img");
-  elem.src = 'muffin.jpg';
+  elem.src = choosePic();
   elem.setAttribute("height", "24");
   elem.setAttribute("width", "24");
   elem.setAttribute("alt", "Muffin!");
   document.getElementById("placehere").appendChild(elem);
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
+
+var myPix = new Array("images/chocolate_chip.jpg","images/chocolate.jpg","images/plain.jpg");
+
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     return myPix[randomNum];
 
 function checkAndConvert(num){
     if(isBinary == true){
