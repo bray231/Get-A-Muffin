@@ -13,17 +13,18 @@ function getMuffin(){
 }
 
 function choosePic(){
-    var images = new Array();
-    images[1] = "Images/chocolate.jpg";
-    images[2] = "Images/chocolate_chip.jpg";
-    images[3] = "Images/plain.jpg";
-    var rnd = Math.floor(Math.random() * images.length);
+    var images = ["Images/chocolate.jpg", "Images/chocolate_chip.jpg", "Images/plain.jpg"];
+    var rnd = Math.floor(Math.random() * 3);
     
     if(rnd == 0){
        rnd = 1;
     }
-        
-     document.getElementById("placehere").appendChild = images[rnd];
+    
+    for(var i = 0; i < rnd; i++){
+        if(rnd == i){
+           document.getElementById("placehere").appendChild = images[rnd];
+        }
+    }
 }
 
 function checkAndConvert(num){
