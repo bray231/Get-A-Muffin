@@ -9,12 +9,8 @@ var counter = 0;
 function getMuffin(){
   counter += 1;
   num_muffins = checkAndConvert(counter);
-  insertPic();
+  document.getElementById("placehere").innerHTML="<img src='Images/chocolate_chip.png' /></img>";
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
-}
-
-function insertPic(){
-    document.getElementById("placehere").innerHTML="<img src='Images/chocolate_chip.png' /></img>";
 }
 
 function checkAndConvert(num){
