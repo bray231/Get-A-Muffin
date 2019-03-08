@@ -9,13 +9,12 @@ var counter = 0;
 function getMuffin(){
   counter += 1;
   num_muffins = checkAndConvert(counter);
-  choosePic();
+  insertPic();
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
-function choosePic(){
-    rnd = Randomizer.nextString("Images/chocolate.jpg","Images/chocolate_chip.jpg","Images/plain.jpg");
-    document.getElementById("placehere").appendChild = rnd;
+function insertPic(){
+    document.getElementById("placehere").innerHTML="<img src='Images/chocolate_chip.png' /></img>";
 }
 
 function checkAndConvert(num){
