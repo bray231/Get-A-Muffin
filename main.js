@@ -1,3 +1,4 @@
+var myPix = new Array("images/chocolate_chip.jpg","images/chocolate.jpg","images/plain.jpg");
 var isBase10 = true;
 var isBinary = false;
 var isHexa = false;
@@ -17,8 +18,6 @@ function getMuffin(){
   document.getElementById("placehere").appendChild(elem);
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
-
-var myPix = new Array("images/chocolate_chip.jpg","images/chocolate.jpg","images/plain.jpg");
 
 function choosePic() {
      var randomNum = Math.floor(Math.random() * myPix.length);
