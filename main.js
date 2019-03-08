@@ -1,4 +1,3 @@
-var myPix = new Array("images/chocolate_chip.jpg","images/chocolate.jpg","images/plain.jpg");
 var isBase10 = true;
 var isBinary = false;
 var isHexa = false;
@@ -10,18 +9,25 @@ var counter = 0;
 function getMuffin(){
   counter += 1;
   num_muffins = checkAndConvert(counter);
-  var elem = document.createElement("img");
-  elem.src = choosePic();
-  elem.setAttribute("height", "24");
-  elem.setAttribute("width", "24");
-  elem.setAttribute("alt", "Muffin!");
-  document.getElementById("placehere").appendChild(elem);
+  choosePic();
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
 function choosePic() {
-     var randomNum = Math.floor(Math.random() * myPix.length);
-     return myPix[randomNum];
+    var myPix = new Array()
+    myPix[1] = "images/chocolate_chip.jpg";
+    myPix[2] = "images/chocolate.jpg";
+    myPix[3] = "images/plain.jpg";
+    var rnd = Math.floor(Math.random() * myPix.length);
+    
+    if(rnd == 0){
+       rnd = 1;
+    }
+    
+    myPix[rnd].setAttribute("height", "24");
+    myPix[rnd].setAttribute("width", "24");
+    myPix[rnd].setAttribute("alt", "Muffin!");
+    document.getElementById("placehere").appendChild(myPix[rnd]);
 
 function checkAndConvert(num){
     if(isBinary == true){
