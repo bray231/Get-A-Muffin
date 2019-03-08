@@ -14,26 +14,8 @@ function getMuffin(){
 }
 
 function choosePic(){
-    var image1 = "Images/chocolate.jpg";
-    var image2 = "Images/chocolate_chip.jpg";
-    var image3 = "Images/plain.jpg";
-    var rnd = Math.floor(Math.random() * 3);
-    
-    if(rnd == 0){
-       rnd = 1;
-    }
-    
-    if(rnd == 1){
-       document.getElementById("placehere").appendChild = image1;
-    }
-    
-    if(rnd == 2){
-       document.getElementById("placehere").appendChild = image2;
-    }
-    
-    if(rnd == 3){
-       document.getElementById("placehere").appendChild = image3;
-    }
+    rnd = Randomizer.nextString("Images/chocolate.jpg","Images/chocolate_chip.jpg","Images/plain.jpg");
+    document.getElementById("placehere").appendChild = rnd;
 }
 
 function checkAndConvert(num){
