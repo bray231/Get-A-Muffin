@@ -16,6 +16,18 @@ function getMuffin(){
   if(rnd == 2){
     elem.src = 'Images/chocolate.jpg';
   }
+    
+  if(rnd == 3){
+     elem.src = 'Images/blueberry.jpg';
+  }
+     
+  if(rnd == 4){
+     elem.src = 'Images/strawberry.jpg';
+  }
+    
+  if(rnd == 5){
+     elem.src = 'Images/wildcherry.jpg';
+  }
   
   elem.setAttribute("height", "24");
   elem.setAttribute("width", "24");
