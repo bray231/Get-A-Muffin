@@ -6,7 +6,7 @@ function getMuffin(){
   var rnd = Math.floor(Math.random() * 3);
   
   if(rnd == 0){
-    rnd = 1;
+    elem.src = 'Images/plain.jpg';
   }
   
   if(rnd == 1){
@@ -15,10 +15,6 @@ function getMuffin(){
   
   if(rnd == 2){
     elem.src = 'Images/chocolate.jpg';
-  }
-  
-  if(rnd == 3){
-    elem.src = 'Images/plain.jpg';
   }
   
   elem.setAttribute("height", "24");
