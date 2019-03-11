@@ -3,7 +3,7 @@ var num_muffins = 0;
 function getMuffin(){
   num_muffins = num_muffins + 1;
   var elem = document.createElement("img");
-  var rnd = Math.floor(Math.random() * 3);
+  var rnd = Math.floor(Math.random() * 6);
   
   if(rnd == 0){
     elem.src = 'Images/plain.jpg';
