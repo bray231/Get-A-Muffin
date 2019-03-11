@@ -1,4 +1,6 @@
 var num_muffins = 0;
+var isBase10 = False;
+var isBinary = False;
     
 function getMuffin(){
   num_muffins = num_muffins + 1;
@@ -34,4 +36,14 @@ function getMuffin(){
   elem.setAttribute("alt", "Muffin!");
   document.getElementById("placehere").appendChild(elem);
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
+}
+
+function setBase10(){
+    isBase10 = True;
+    isBinary = False;
+}
+
+function setBinary(){
+    isBase10 = False;
+    isBinary = True;
 }
