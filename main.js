@@ -38,6 +38,10 @@ function getMuffin(){
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
+function convertToBinary(){
+    return parseInt(num, 10).toString(2);
+}
+
 function setBase10(){
     isBase10 = True;
     isBinary = False;
