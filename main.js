@@ -6,8 +6,21 @@ var isOctal = False;
 var isBase36 = False;
     
 function getMuffin(){
-  num_muffins = convertToBase10(num_muffins);
+  if(isBinary == True){
+    num_muffins = convertBinaryToBase10(num_muffins);
+  }
+  if(isHexa == True){
+    num_muffins = convertHexaToBase10(num_muffins);
+  }
+  if(isOctal == True){
+    num_muffins = convertOctalToBase10(num_muffins);
+  }
+  if(isBase36 == True){
+    num_muffins = convertBase36ToBase10(num_muffins);
+  }
+  
   num_muffins = num_muffins + 1;
+  
   if(isBase10 == True){
     num_muffins = convertToBase10(num_muffins);
   }
@@ -57,8 +70,20 @@ function getMuffin(){
   document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
 }
 
-function convertToBase10(num){
+function convertBinaryToBase10(num){
     return parseInt(num, 2).toString(10);
+}
+
+function convertHexaToBase10(num){
+    return parseInt(num, 6).toString(10);
+}
+
+function convertOctalToBase10(num){
+    return parseInt(num, 8).toString(10);
+}
+
+function convertBase36ToBase10(num){
+    return parseInt(num, 36).toString(10);
 }
 
 function convertToBinary(num){
