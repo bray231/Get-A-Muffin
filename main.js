@@ -1,5 +1,5 @@
 var num_muffins = 0;
-var isBase10 = False;
+var isBase10 = True;
 var isBinary = False;
 var isHexa = False;
 var isOctal = False;
