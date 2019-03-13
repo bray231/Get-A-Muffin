@@ -36,7 +36,7 @@ function getMuffin(){
   elem.setAttribute("width", "24");
   elem.setAttribute("alt", "Muffin!");
   document.getElementById("placehere").appendChild(elem);
-  document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins + " | ";
+  document.getElementById("muffin_counter").innerHTML = "Muffins: " + num_muffins;
   document.getElementById("muffin_counter_binary").innerHTML = " | " + num_muffins_binary;
   document.getElementById("muffin_counter_hexa").innerHTML = " | " + num_muffins_hexa;
   document.getElementById("muffin_counter_octal").innerHTML = " | " + num_muffins_octal;
